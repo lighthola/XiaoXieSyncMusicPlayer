@@ -16,6 +16,7 @@
 		CEB3AFC91CFECD07004058A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB3AFC71CFECD07004058A4 /* LaunchScreen.storyboard */; };
 		CEB3AFD21CFECE93004058A4 /* AFNetworkingSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFD11CFECE93004058A4 /* AFNetworkingSingleton.m */; };
 		CECBEFCC1D01229D00BC4336 /* MusicListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBEFCB1D01229D00BC4336 /* MusicListTableViewCell.m */; };
+		CECBEFCF1D0151E600BC4336 /* MusicSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBEFCE1D0151E600BC4336 /* MusicSlider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		CEB3AFD11CFECE93004058A4 /* AFNetworkingSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingSingleton.m; sourceTree = "<group>"; };
 		CECBEFCA1D01229D00BC4336 /* MusicListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListTableViewCell.h; sourceTree = "<group>"; };
 		CECBEFCB1D01229D00BC4336 /* MusicListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListTableViewCell.m; sourceTree = "<group>"; };
+		CECBEFCD1D0151E600BC4336 /* MusicSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicSlider.h; sourceTree = "<group>"; };
+		CECBEFCE1D0151E600BC4336 /* MusicSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicSlider.m; sourceTree = "<group>"; };
 		D7CDE2337DED56AFF88628AC /* Pods-XiaoXieSyncMusicPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaoXieSyncMusicPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XiaoXieSyncMusicPlayer/Pods-XiaoXieSyncMusicPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,15 +82,10 @@
 		CEB3AFB81CFECD07004058A4 /* XiaoXieSyncMusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				CEB3AFBC1CFECD07004058A4 /* AppDelegate.h */,
-				CEB3AFBD1CFECD07004058A4 /* AppDelegate.m */,
 				CEB3AFD01CFECE93004058A4 /* AFNetworkingSingleton.h */,
 				CEB3AFD11CFECE93004058A4 /* AFNetworkingSingleton.m */,
-				CEB3AFBF1CFECD07004058A4 /* ViewController.h */,
-				CEB3AFC01CFECD07004058A4 /* ViewController.m */,
-				CEB3AFC21CFECD07004058A4 /* Main.storyboard */,
-				CECBEFCA1D01229D00BC4336 /* MusicListTableViewCell.h */,
-				CECBEFCB1D01229D00BC4336 /* MusicListTableViewCell.m */,
+				CECBEFD11D0152E500BC4336 /* VC */,
+				CECBEFD01D0152D300BC4336 /* View */,
 				CEB3AFC51CFECD07004058A4 /* Assets.xcassets */,
 				CEB3AFC71CFECD07004058A4 /* LaunchScreen.storyboard */,
 				CEB3AFCA1CFECD07004058A4 /* Info.plist */,
@@ -99,9 +97,32 @@
 		CEB3AFB91CFECD07004058A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEB3AFBC1CFECD07004058A4 /* AppDelegate.h */,
+				CEB3AFBD1CFECD07004058A4 /* AppDelegate.m */,
 				CEB3AFBA1CFECD07004058A4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CECBEFD01D0152D300BC4336 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CECBEFCD1D0151E600BC4336 /* MusicSlider.h */,
+				CECBEFCE1D0151E600BC4336 /* MusicSlider.m */,
+				CECBEFCA1D01229D00BC4336 /* MusicListTableViewCell.h */,
+				CECBEFCB1D01229D00BC4336 /* MusicListTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CECBEFD11D0152E500BC4336 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3AFBF1CFECD07004058A4 /* ViewController.h */,
+				CEB3AFC01CFECD07004058A4 /* ViewController.m */,
+				CEB3AFC21CFECD07004058A4 /* Main.storyboard */,
+			);
+			name = VC;
 			sourceTree = "<group>";
 		};
 		E1EFED91C325F2D60335459E /* Pods */ = {
@@ -234,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECBEFCF1D0151E600BC4336 /* MusicSlider.m in Sources */,
 				CEB3AFD21CFECE93004058A4 /* AFNetworkingSingleton.m in Sources */,
 				CEB3AFC11CFECD07004058A4 /* ViewController.m in Sources */,
 				CEB3AFBE1CFECD07004058A4 /* AppDelegate.m in Sources */,
