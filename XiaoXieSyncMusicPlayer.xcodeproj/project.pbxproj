@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51924F7A816D8AC9025F5B98 /* libPods-XiaoXieSyncMusicPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C099EF7080AB54340E062CAB /* libPods-XiaoXieSyncMusicPlayer.a */; };
+		CE35C5461D01825A0033DE33 /* GVUserDefaults+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35C5451D01825A0033DE33 /* GVUserDefaults+Properties.m */; };
 		CEB3AFBB1CFECD07004058A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFBA1CFECD07004058A4 /* main.m */; };
 		CEB3AFBE1CFECD07004058A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFBD1CFECD07004058A4 /* AppDelegate.m */; };
 		CEB3AFC11CFECD07004058A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFC01CFECD07004058A4 /* ViewController.m */; };
@@ -22,6 +23,9 @@
 /* Begin PBXFileReference section */
 		39CAEC92B6807189CAB03689 /* Pods-XiaoXieSyncMusicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaoXieSyncMusicPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-XiaoXieSyncMusicPlayer/Pods-XiaoXieSyncMusicPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		C099EF7080AB54340E062CAB /* libPods-XiaoXieSyncMusicPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XiaoXieSyncMusicPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE35C5411D0176040033DE33 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		CE35C5441D01825A0033DE33 /* GVUserDefaults+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+Properties.h"; sourceTree = "<group>"; };
+		CE35C5451D01825A0033DE33 /* GVUserDefaults+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+Properties.m"; sourceTree = "<group>"; };
 		CEB3AFB61CFECD06004058A4 /* XiaoXieSyncMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiaoXieSyncMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3AFBA1CFECD07004058A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEB3AFBC1CFECD07004058A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE35C5471D0182710033DE33 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CE35C5441D01825A0033DE33 /* GVUserDefaults+Properties.h */,
+				CE35C5451D01825A0033DE33 /* GVUserDefaults+Properties.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		CEB3AFAD1CFECD06004058A4 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +97,7 @@
 			children = (
 				CEB3AFD01CFECE93004058A4 /* AFNetworkingSingleton.h */,
 				CEB3AFD11CFECE93004058A4 /* AFNetworkingSingleton.m */,
+				CE35C5471D0182710033DE33 /* Categories */,
 				CECBEFD11D0152E500BC4336 /* VC */,
 				CECBEFD01D0152D300BC4336 /* View */,
 				CEB3AFC51CFECD07004058A4 /* Assets.xcassets */,
@@ -99,6 +113,7 @@
 			children = (
 				CEB3AFBC1CFECD07004058A4 /* AppDelegate.h */,
 				CEB3AFBD1CFECD07004058A4 /* AppDelegate.m */,
+				CE35C5411D0176040033DE33 /* Constants.h */,
 				CEB3AFBA1CFECD07004058A4 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -258,6 +273,7 @@
 				CECBEFCF1D0151E600BC4336 /* MusicSlider.m in Sources */,
 				CEB3AFD21CFECE93004058A4 /* AFNetworkingSingleton.m in Sources */,
 				CEB3AFC11CFECD07004058A4 /* ViewController.m in Sources */,
+				CE35C5461D01825A0033DE33 /* GVUserDefaults+Properties.m in Sources */,
 				CEB3AFBE1CFECD07004058A4 /* AppDelegate.m in Sources */,
 				CECBEFCC1D01229D00BC4336 /* MusicListTableViewCell.m in Sources */,
 				CEB3AFBB1CFECD07004058A4 /* main.m in Sources */,

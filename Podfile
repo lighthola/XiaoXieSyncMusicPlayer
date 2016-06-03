@@ -9,6 +9,7 @@ target 'XiaoXieSyncMusicPlayer' do
   # use_frameworks!
 pod 'AFNetworking', '~> 3.0'
 pod 'NAKPlaybackIndicatorView'
+pod 'GVUserDefaults'
   # Pods for XiaoXieSyncMusicPlayer
 
 end

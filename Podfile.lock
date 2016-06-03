@@ -14,16 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - GVUserDefaults (1.0.2)
   - NAKPlaybackIndicatorView (0.0.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - GVUserDefaults
   - NAKPlaybackIndicatorView
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  GVUserDefaults: 52d48cf8ba578b40a1a76312b196dfc9134ba36a
   NAKPlaybackIndicatorView: 794dd97576fe074bb1844c19ebcbf7509384a47f
 
-PODFILE CHECKSUM: 03e3472b0872517da4709e634b434f40a01c7465
+PODFILE CHECKSUM: 85fbd66055c1ef6271c3db8cc01b6a876d6bdb1c
 
 COCOAPODS: 1.0.0

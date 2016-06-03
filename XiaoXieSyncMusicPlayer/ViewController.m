@@ -9,38 +9,94 @@
 #import "ViewController.h"
 
 // self class
+#import "Constants.h"
 #import "AFNetworkingSingleton.h"
 #import "MusicListTableViewCell.h"
 #import "MusicSlider.h"
+#import "GVUserDefaults+Properties.h"
 
 @interface ViewController () <UITableViewDataSource,UITableViewDelegate>
 {
     AFNetworkingSingleton *link;
+    BOOL playbackFlag;
+    MusicCycleType musicCycleType;
 }
 @property (weak, nonatomic) IBOutlet UITableView *musicTable;
 @property (weak, nonatomic) IBOutlet MusicSlider *musicSlider;
+@property (weak, nonatomic) IBOutlet UIButton *playbackModeBtn;
 @end
 
 @implementation ViewController
 
--(void)awakeFromNib {
-    [super awakeFromNib];
-
-    link = [AFNetworkingSingleton sharedAFNetworkingSingleton];
-    
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Prepare Data
+    // Prepare Class
+    link = [AFNetworkingSingleton sharedAFNetworkingSingleton];
+    
+    // Prepare Delegate
     _musicTable.delegate = self;
     _musicTable.dataSource = self;
+    
+    // Prepare Flag
+    playbackFlag = true;
+    musicCycleType = MusicCycleTypeLoopAll;
     
     // Some methods
     [self linkToServer];
 }
 
+#pragma mark - IBAction
+- (IBAction)playbackBtnpressed:(id)sender {
+    
+    if (playbackFlag) {
+        [(UIButton*)sender setImage:[UIImage imageNamed:PAUSE_BTN_IMAGE] forState:UIControlStateNormal];
+        
+        
+        playbackFlag = false;
+    }
+    else {
+        [(UIButton*)sender setImage:[UIImage imageNamed:PLAYBACK_BTN_IMAGE] forState:UIControlStateNormal];
+        
+        
+        playbackFlag = true;
+    }
+}
+- (IBAction)lastMusicBtnPressed:(id)sender {
+    
+}
+- (IBAction)nextMusicBtnPressed:(id)sender {
+    
+}
+- (IBAction)playbackModeBtnPresssed:(id)sender {
+    
+    [(UIButton*)sender setImage:[UIImage imageNamed:LOOP_SINGLE_BTN_IMAGE] forState:UIControlStateNormal];
+    
+    switch (musicCycleType) {
+        case MusicCycleTypeLoopAll:
+            [(UIButton*)sender setImage:[UIImage imageNamed:LOOP_SINGLE_BTN_IMAGE] forState:UIControlStateNormal];
+            
+            musicCycleType = MusicCycleTypeLoopSingle;
+            break;
+        case MusicCycleTypeLoopSingle:
+            [(UIButton*)sender setImage:[UIImage imageNamed:SHUFFLE_BTN_IMAGE] forState:UIControlStateNormal];
+            musicCycleType = MusicCycleTypeShuffle;
+            break;
+        case MusicCycleTypeShuffle:
+            [(UIButton*)sender setImage:[UIImage imageNamed:LOOP_ALL_BTN_IMAGE] forState:UIControlStateNormal];
+            musicCycleType = MusicCycleTypeLoopAll;
+            break;
+            
+        default:
+            break;
+    }
+}
+- (IBAction)moreBtnPressed:(id)sender {
+    
+}
+
+
+#pragma mark - Link To Server
 -(void)linkToServer {
     
     [link getAllInformation:^(NSError *error, id result) {
@@ -54,8 +110,10 @@
     }];
 }
 
+#pragma mark - SET_UP_UI
+#pragma mark Normal UI
 
-#pragma mark - Control Music Indicator
+#pragma mark Control Music Indicator
 static NSIndexPath *lastPlaybackIndexPath = nil;
 -(void)setMusicIndicatorStateAtIndexPath:(NSIndexPath*)indexPath {
     

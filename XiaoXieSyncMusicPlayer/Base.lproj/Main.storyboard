@@ -64,22 +64,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-eQ-GJY">
                                                 <rect key="frame" x="120" y="2" width="120" height="60"/>
                                                 <state key="normal" image="prev_song"/>
+                                                <connections>
+                                                    <action selector="lastMusicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vVv-nM-GZh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yd-fh-6yU">
                                                 <rect key="frame" x="240" y="2" width="120" height="60"/>
                                                 <state key="normal" image="big_play_button"/>
+                                                <connections>
+                                                    <action selector="playbackBtnpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KSP-Um-N4o"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTp-p4-wXe">
                                                 <rect key="frame" x="360" y="2" width="120" height="60"/>
                                                 <state key="normal" image="next_song"/>
+                                                <connections>
+                                                    <action selector="nextMusicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G9c-VZ-Gld"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh7-qV-qKz">
                                                 <rect key="frame" x="0.0" y="2" width="120" height="60"/>
-                                                <state key="normal" image="shuffle_icon"/>
+                                                <state key="normal" image="loop_all_icon"/>
+                                                <connections>
+                                                    <action selector="playbackModeBtnPresssed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1YP-Bg-743"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guF-HK-f0v">
                                                 <rect key="frame" x="480" y="2" width="120" height="60"/>
                                                 <state key="normal" image="more_icon"/>
+                                                <connections>
+                                                    <action selector="moreBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K74-RN-qQv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.38793601370000003" blue="0.44187977449999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,6 +215,7 @@
                     <connections>
                         <outlet property="musicSlider" destination="OqV-gr-A45" id="Qkz-2R-nmJ"/>
                         <outlet property="musicTable" destination="8PG-hX-Uyi" id="1fn-cP-DUe"/>
+                        <outlet property="playbackModeBtn" destination="Yh7-qV-qKz" id="3MU-7c-Da4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -209,9 +225,9 @@
     </scenes>
     <resources>
         <image name="big_play_button" width="60" height="60"/>
+        <image name="loop_all_icon" width="20" height="16"/>
         <image name="more_icon" width="25" height="23"/>
         <image name="next_song" width="20" height="28"/>
         <image name="prev_song" width="20" height="28"/>
-        <image name="shuffle_icon" width="17" height="14"/>
     </resources>
 </document>
