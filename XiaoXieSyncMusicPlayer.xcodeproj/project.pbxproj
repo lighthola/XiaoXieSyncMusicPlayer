@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		51924F7A816D8AC9025F5B98 /* libPods-XiaoXieSyncMusicPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C099EF7080AB54340E062CAB /* libPods-XiaoXieSyncMusicPlayer.a */; };
+		CEB3AFBB1CFECD07004058A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFBA1CFECD07004058A4 /* main.m */; };
+		CEB3AFBE1CFECD07004058A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFBD1CFECD07004058A4 /* AppDelegate.m */; };
+		CEB3AFC11CFECD07004058A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFC01CFECD07004058A4 /* ViewController.m */; };
+		CEB3AFC41CFECD07004058A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB3AFC21CFECD07004058A4 /* Main.storyboard */; };
+		CEB3AFC61CFECD07004058A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3AFC51CFECD07004058A4 /* Assets.xcassets */; };
+		CEB3AFC91CFECD07004058A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB3AFC71CFECD07004058A4 /* LaunchScreen.storyboard */; };
+		CEB3AFD21CFECE93004058A4 /* AFNetworkingSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFD11CFECE93004058A4 /* AFNetworkingSingleton.m */; };
+		CECBEFCC1D01229D00BC4336 /* MusicListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBEFCB1D01229D00BC4336 /* MusicListTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39CAEC92B6807189CAB03689 /* Pods-XiaoXieSyncMusicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaoXieSyncMusicPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-XiaoXieSyncMusicPlayer/Pods-XiaoXieSyncMusicPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		C099EF7080AB54340E062CAB /* libPods-XiaoXieSyncMusicPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XiaoXieSyncMusicPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB3AFB61CFECD06004058A4 /* XiaoXieSyncMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiaoXieSyncMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB3AFBA1CFECD07004058A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEB3AFBC1CFECD07004058A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEB3AFBD1CFECD07004058A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEB3AFBF1CFECD07004058A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CEB3AFC01CFECD07004058A4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CEB3AFC31CFECD07004058A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEB3AFC51CFECD07004058A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEB3AFC81CFECD07004058A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEB3AFCA1CFECD07004058A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB3AFD01CFECE93004058A4 /* AFNetworkingSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingSingleton.h; sourceTree = "<group>"; };
+		CEB3AFD11CFECE93004058A4 /* AFNetworkingSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingSingleton.m; sourceTree = "<group>"; };
+		CECBEFCA1D01229D00BC4336 /* MusicListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListTableViewCell.h; sourceTree = "<group>"; };
+		CECBEFCB1D01229D00BC4336 /* MusicListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListTableViewCell.m; sourceTree = "<group>"; };
+		D7CDE2337DED56AFF88628AC /* Pods-XiaoXieSyncMusicPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaoXieSyncMusicPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XiaoXieSyncMusicPlayer/Pods-XiaoXieSyncMusicPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEB3AFB31CFECD06004058A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51924F7A816D8AC9025F5B98 /* libPods-XiaoXieSyncMusicPlayer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66348D5F7FDAA340B77EDCB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C099EF7080AB54340E062CAB /* libPods-XiaoXieSyncMusicPlayer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEB3AFAD1CFECD06004058A4 = {
+			isa = PBXGroup;
+			children = (
+				CEB3AFB81CFECD07004058A4 /* XiaoXieSyncMusicPlayer */,
+				CEB3AFB71CFECD06004058A4 /* Products */,
+				E1EFED91C325F2D60335459E /* Pods */,
+				66348D5F7FDAA340B77EDCB4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEB3AFB71CFECD06004058A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3AFB61CFECD06004058A4 /* XiaoXieSyncMusicPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEB3AFB81CFECD07004058A4 /* XiaoXieSyncMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3AFBC1CFECD07004058A4 /* AppDelegate.h */,
+				CEB3AFBD1CFECD07004058A4 /* AppDelegate.m */,
+				CEB3AFD01CFECE93004058A4 /* AFNetworkingSingleton.h */,
+				CEB3AFD11CFECE93004058A4 /* AFNetworkingSingleton.m */,
+				CEB3AFBF1CFECD07004058A4 /* ViewController.h */,
+				CEB3AFC01CFECD07004058A4 /* ViewController.m */,
+				CEB3AFC21CFECD07004058A4 /* Main.storyboard */,
+				CECBEFCA1D01229D00BC4336 /* MusicListTableViewCell.h */,
+				CECBEFCB1D01229D00BC4336 /* MusicListTableViewCell.m */,
+				CEB3AFC51CFECD07004058A4 /* Assets.xcassets */,
+				CEB3AFC71CFECD07004058A4 /* LaunchScreen.storyboard */,
+				CEB3AFCA1CFECD07004058A4 /* Info.plist */,
+				CEB3AFB91CFECD07004058A4 /* Supporting Files */,
+			);
+			path = XiaoXieSyncMusicPlayer;
+			sourceTree = "<group>";
+		};
+		CEB3AFB91CFECD07004058A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3AFBA1CFECD07004058A4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1EFED91C325F2D60335459E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7CDE2337DED56AFF88628AC /* Pods-XiaoXieSyncMusicPlayer.debug.xcconfig */,
+				39CAEC92B6807189CAB03689 /* Pods-XiaoXieSyncMusicPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEB3AFB51CFECD06004058A4 /* XiaoXieSyncMusicPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB3AFCD1CFECD07004058A4 /* Build configuration list for PBXNativeTarget "XiaoXieSyncMusicPlayer" */;
+			buildPhases = (
+				326D613A94FC293729A9EBE3 /* 📦 Check Pods Manifest.lock */,
+				CEB3AFB21CFECD06004058A4 /* Sources */,
+				CEB3AFB31CFECD06004058A4 /* Frameworks */,
+				CEB3AFB41CFECD06004058A4 /* Resources */,
+				364B9DF79E6D58A2684AD3D2 /* 📦 Embed Pods Frameworks */,
+				C92D2673A7C1A2611DFD0DF0 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XiaoXieSyncMusicPlayer;
+			productName = XiaoXieSyncMusicPlayer;
+			productReference = CEB3AFB61CFECD06004058A4 /* XiaoXieSyncMusicPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEB3AFAE1CFECD06004058A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Bevis, Chen";
+				TargetAttributes = {
+					CEB3AFB51CFECD06004058A4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CEB3AFB11CFECD06004058A4 /* Build configuration list for PBXProject "XiaoXieSyncMusicPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEB3AFAD1CFECD06004058A4;
+			productRefGroup = CEB3AFB71CFECD06004058A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEB3AFB51CFECD06004058A4 /* XiaoXieSyncMusicPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEB3AFB41CFECD06004058A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB3AFC91CFECD07004058A4 /* LaunchScreen.storyboard in Resources */,
+				CEB3AFC61CFECD07004058A4 /* Assets.xcassets in Resources */,
+				CEB3AFC41CFECD07004058A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		326D613A94FC293729A9EBE3 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		364B9DF79E6D58A2684AD3D2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XiaoXieSyncMusicPlayer/Pods-XiaoXieSyncMusicPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C92D2673A7C1A2611DFD0DF0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XiaoXieSyncMusicPlayer/Pods-XiaoXieSyncMusicPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEB3AFB21CFECD06004058A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB3AFD21CFECE93004058A4 /* AFNetworkingSingleton.m in Sources */,
+				CEB3AFC11CFECD07004058A4 /* ViewController.m in Sources */,
+				CEB3AFBE1CFECD07004058A4 /* AppDelegate.m in Sources */,
+				CECBEFCC1D01229D00BC4336 /* MusicListTableViewCell.m in Sources */,
+				CEB3AFBB1CFECD07004058A4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEB3AFC21CFECD07004058A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB3AFC31CFECD07004058A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEB3AFC71CFECD07004058A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB3AFC81CFECD07004058A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEB3AFCB1CFECD07004058A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEB3AFCC1CFECD07004058A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEB3AFCE1CFECD07004058A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7CDE2337DED56AFF88628AC /* Pods-XiaoXieSyncMusicPlayer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XiaoXieSyncMusicPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bevis.XiaoXieSyncMusicPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEB3AFCF1CFECD07004058A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39CAEC92B6807189CAB03689 /* Pods-XiaoXieSyncMusicPlayer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XiaoXieSyncMusicPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bevis.XiaoXieSyncMusicPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEB3AFB11CFECD06004058A4 /* Build configuration list for PBXProject "XiaoXieSyncMusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB3AFCB1CFECD07004058A4 /* Debug */,
+				CEB3AFCC1CFECD07004058A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB3AFCD1CFECD07004058A4 /* Build configuration list for PBXNativeTarget "XiaoXieSyncMusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB3AFCE1CFECD07004058A4 /* Debug */,
+				CEB3AFCF1CFECD07004058A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEB3AFAE1CFECD06004058A4 /* Project object */;
+}
