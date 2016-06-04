@@ -6,10 +6,14 @@ platform :ios, '8.0'
 
 target 'XiaoXieSyncMusicPlayer' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-pod 'AFNetworking', '~> 3.0'
-pod 'NAKPlaybackIndicatorView'
-pod 'GVUserDefaults'
-  # Pods for XiaoXieSyncMusicPlayer
+  
+  pod 'AFNetworking', '~> 3.0'
+  pod 'NAKPlaybackIndicatorView'
+  pod 'GVUserDefaults'
+  pod 'DOUAudioStreamer'
+  use_frameworks!
+  pod 'Socket.IO-Client-Swift'
+
+   # Pods for XiaoXieSyncMusicPlayer
 
 end

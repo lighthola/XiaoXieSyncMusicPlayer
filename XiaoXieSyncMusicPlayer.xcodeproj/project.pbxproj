@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51924F7A816D8AC9025F5B98 /* libPods-XiaoXieSyncMusicPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C099EF7080AB54340E062CAB /* libPods-XiaoXieSyncMusicPlayer.a */; };
+		65BBBB817FDEE3BDE5797252 /* Pods_XiaoXieSyncMusicPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2DD23CC224C8C117C0C944 /* Pods_XiaoXieSyncMusicPlayer.framework */; };
 		CE35C5461D01825A0033DE33 /* GVUserDefaults+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35C5451D01825A0033DE33 /* GVUserDefaults+Properties.m */; };
+		CE35C54B1D0268E10033DE33 /* 1770040300_2031329_l.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE35C5481D0268E10033DE33 /* 1770040300_2031329_l.mp3 */; };
+		CE35C54C1D0268E10033DE33 /* 1770059653_2050944_l.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE35C5491D0268E10033DE33 /* 1770059653_2050944_l.mp3 */; };
+		CE35C54D1D0268E10033DE33 /* 1771694697_4194836_l.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE35C54A1D0268E10033DE33 /* 1771694697_4194836_l.mp3 */; };
+		CE35C5521D027CA90033DE33 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35C5511D027CA90033DE33 /* Track.m */; };
+		CE917DF61D02FD5D006A3DC6 /* MySwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE917DF51D02FD5D006A3DC6 /* MySwiftClass.swift */; };
 		CEB3AFBB1CFECD07004058A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFBA1CFECD07004058A4 /* main.m */; };
 		CEB3AFBE1CFECD07004058A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFBD1CFECD07004058A4 /* AppDelegate.m */; };
 		CEB3AFC11CFECD07004058A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3AFC01CFECD07004058A4 /* ViewController.m */; };
@@ -22,10 +27,17 @@
 
 /* Begin PBXFileReference section */
 		39CAEC92B6807189CAB03689 /* Pods-XiaoXieSyncMusicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaoXieSyncMusicPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-XiaoXieSyncMusicPlayer/Pods-XiaoXieSyncMusicPlayer.release.xcconfig"; sourceTree = "<group>"; };
-		C099EF7080AB54340E062CAB /* libPods-XiaoXieSyncMusicPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XiaoXieSyncMusicPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F2DD23CC224C8C117C0C944 /* Pods_XiaoXieSyncMusicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XiaoXieSyncMusicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE35C5411D0176040033DE33 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		CE35C5441D01825A0033DE33 /* GVUserDefaults+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+Properties.h"; sourceTree = "<group>"; };
 		CE35C5451D01825A0033DE33 /* GVUserDefaults+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+Properties.m"; sourceTree = "<group>"; };
+		CE35C5481D0268E10033DE33 /* 1770040300_2031329_l.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1770040300_2031329_l.mp3; sourceTree = "<group>"; };
+		CE35C5491D0268E10033DE33 /* 1770059653_2050944_l.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1770059653_2050944_l.mp3; sourceTree = "<group>"; };
+		CE35C54A1D0268E10033DE33 /* 1771694697_4194836_l.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1771694697_4194836_l.mp3; sourceTree = "<group>"; };
+		CE35C5501D027CA90033DE33 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		CE35C5511D027CA90033DE33 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		CE35C5631D02F3DB0033DE33 /* XiaoXieSyncMusicPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XiaoXieSyncMusicPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE917DF51D02FD5D006A3DC6 /* MySwiftClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySwiftClass.swift; sourceTree = "<group>"; };
 		CEB3AFB61CFECD06004058A4 /* XiaoXieSyncMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiaoXieSyncMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3AFBA1CFECD07004058A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEB3AFBC1CFECD07004058A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51924F7A816D8AC9025F5B98 /* libPods-XiaoXieSyncMusicPlayer.a in Frameworks */,
+				65BBBB817FDEE3BDE5797252 /* Pods_XiaoXieSyncMusicPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +72,7 @@
 		66348D5F7FDAA340B77EDCB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C099EF7080AB54340E062CAB /* libPods-XiaoXieSyncMusicPlayer.a */,
+				6F2DD23CC224C8C117C0C944 /* Pods_XiaoXieSyncMusicPlayer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -72,6 +84,35 @@
 				CE35C5451D01825A0033DE33 /* GVUserDefaults+Properties.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		CE35C54E1D0269040033DE33 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3AFC51CFECD07004058A4 /* Assets.xcassets */,
+				CE35C5481D0268E10033DE33 /* 1770040300_2031329_l.mp3 */,
+				CE35C5491D0268E10033DE33 /* 1770059653_2050944_l.mp3 */,
+				CE35C54A1D0268E10033DE33 /* 1771694697_4194836_l.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CE35C5531D027CB60033DE33 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				CE35C5501D027CA90033DE33 /* Track.h */,
+				CE35C5511D027CA90033DE33 /* Track.m */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		CE35C5541D027D120033DE33 /* LinkNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3AFD01CFECE93004058A4 /* AFNetworkingSingleton.h */,
+				CEB3AFD11CFECE93004058A4 /* AFNetworkingSingleton.m */,
+			);
+			name = LinkNetwork;
 			sourceTree = "<group>";
 		};
 		CEB3AFAD1CFECD06004058A4 = {
@@ -95,12 +136,12 @@
 		CEB3AFB81CFECD07004058A4 /* XiaoXieSyncMusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				CEB3AFD01CFECE93004058A4 /* AFNetworkingSingleton.h */,
-				CEB3AFD11CFECE93004058A4 /* AFNetworkingSingleton.m */,
+				CE35C5531D027CB60033DE33 /* ThirdParty */,
+				CE35C5541D027D120033DE33 /* LinkNetwork */,
 				CE35C5471D0182710033DE33 /* Categories */,
 				CECBEFD11D0152E500BC4336 /* VC */,
 				CECBEFD01D0152D300BC4336 /* View */,
-				CEB3AFC51CFECD07004058A4 /* Assets.xcassets */,
+				CE35C54E1D0269040033DE33 /* Resources */,
 				CEB3AFC71CFECD07004058A4 /* LaunchScreen.storyboard */,
 				CEB3AFCA1CFECD07004058A4 /* Info.plist */,
 				CEB3AFB91CFECD07004058A4 /* Supporting Files */,
@@ -111,6 +152,8 @@
 		CEB3AFB91CFECD07004058A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE35C5631D02F3DB0033DE33 /* XiaoXieSyncMusicPlayer-Bridging-Header.h */,
+				CE917DF51D02FD5D006A3DC6 /* MySwiftClass.swift */,
 				CEB3AFBC1CFECD07004058A4 /* AppDelegate.h */,
 				CEB3AFBD1CFECD07004058A4 /* AppDelegate.m */,
 				CE35C5411D0176040033DE33 /* Constants.h */,
@@ -122,10 +165,10 @@
 		CECBEFD01D0152D300BC4336 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CECBEFCD1D0151E600BC4336 /* MusicSlider.h */,
-				CECBEFCE1D0151E600BC4336 /* MusicSlider.m */,
 				CECBEFCA1D01229D00BC4336 /* MusicListTableViewCell.h */,
 				CECBEFCB1D01229D00BC4336 /* MusicListTableViewCell.m */,
+				CECBEFCD1D0151E600BC4336 /* MusicSlider.h */,
+				CECBEFCE1D0151E600BC4336 /* MusicSlider.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -211,7 +254,10 @@
 			files = (
 				CEB3AFC91CFECD07004058A4 /* LaunchScreen.storyboard in Resources */,
 				CEB3AFC61CFECD07004058A4 /* Assets.xcassets in Resources */,
+				CE35C54B1D0268E10033DE33 /* 1770040300_2031329_l.mp3 in Resources */,
 				CEB3AFC41CFECD07004058A4 /* Main.storyboard in Resources */,
+				CE35C54D1D0268E10033DE33 /* 1771694697_4194836_l.mp3 in Resources */,
+				CE35C54C1D0268E10033DE33 /* 1770059653_2050944_l.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,9 +320,11 @@
 				CEB3AFD21CFECE93004058A4 /* AFNetworkingSingleton.m in Sources */,
 				CEB3AFC11CFECD07004058A4 /* ViewController.m in Sources */,
 				CE35C5461D01825A0033DE33 /* GVUserDefaults+Properties.m in Sources */,
+				CE917DF61D02FD5D006A3DC6 /* MySwiftClass.swift in Sources */,
 				CEB3AFBE1CFECD07004058A4 /* AppDelegate.m in Sources */,
 				CECBEFCC1D01229D00BC4336 /* MusicListTableViewCell.m in Sources */,
 				CEB3AFBB1CFECD07004058A4 /* main.m in Sources */,
+				CE35C5521D027CA90033DE33 /* Track.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,11 +439,15 @@
 			baseConfigurationReference = D7CDE2337DED56AFF88628AC /* Pods-XiaoXieSyncMusicPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = XiaoXieSyncMusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bevis.XiaoXieSyncMusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XiaoXieSyncMusicPlayer/XiaoXieSyncMusicPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -404,11 +456,14 @@
 			baseConfigurationReference = 39CAEC92B6807189CAB03689 /* Pods-XiaoXieSyncMusicPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = XiaoXieSyncMusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bevis.XiaoXieSyncMusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XiaoXieSyncMusicPlayer/XiaoXieSyncMusicPlayer-Bridging-Header.h";
 			};
 			name = Release;
 		};

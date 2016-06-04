@@ -13,6 +13,12 @@
 #import "AFNetworkingSingleton.h"
 #import "MusicListTableViewCell.h"
 #import "MusicSlider.h"
+#import <XiaoXieSyncMusicPlayer-Swift.h>
+
+// Third Party
+#import "Track.h"
+#import <DOUAudioStreamer/DOUAudioStreamer.h>
+#import <SocketIOClientSwift/SocketIOClientSwift-Swift.h>
 #import "GVUserDefaults+Properties.h"
 
 @interface ViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -20,6 +26,9 @@
     AFNetworkingSingleton *link;
     BOOL playbackFlag;
     MusicCycleType musicCycleType;
+    
+    SocketIOClient* socket;
+    
 }
 @property (weak, nonatomic) IBOutlet UITableView *musicTable;
 @property (weak, nonatomic) IBOutlet MusicSlider *musicSlider;
@@ -43,7 +52,25 @@
     musicCycleType = MusicCycleTypeLoopAll;
     
     // Some methods
-    [self linkToServer];
+//    [self linkToServer];
+    
+    // Socket.io
+    [self doSocketIO];
+    
+
+}
+#pragma mark - Socket.io
+-(void)doSocketIO {
+    
+    NSURL* url = [[NSURL alloc] initWithString:@"http://localhost:3162"];
+    socket = [[SocketIOClient alloc] initWithSocketURL:url options:nil];
+    
+    [socket on:@"chat message" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
+        
+        NSLog(@"Data: %@\nAck: %@",data,ack);
+    }];
+    
+    [socket connect];
 }
 
 #pragma mark - IBAction
@@ -63,7 +90,7 @@
     }
 }
 - (IBAction)lastMusicBtnPressed:(id)sender {
-    
+    [socket emit:@"chat message" withItems:@[@"play",@"台灣有個阿里山."]];
 }
 - (IBAction)nextMusicBtnPressed:(id)sender {
     

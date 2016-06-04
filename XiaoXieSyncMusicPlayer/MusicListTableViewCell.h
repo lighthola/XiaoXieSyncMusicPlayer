@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-// Third Part
-#import <NAKPlaybackIndicatorView.h>
+// Third Party
+#import "NAKPlaybackIndicatorView.h"
 
 @interface MusicListTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *song;
