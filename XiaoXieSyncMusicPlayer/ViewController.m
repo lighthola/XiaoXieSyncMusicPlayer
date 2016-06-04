@@ -26,7 +26,7 @@
     AFNetworkingSingleton *link;
     BOOL playbackFlag;
     MusicCycleType musicCycleType;
-    
+    DOUAudioStreamer *streamer;
     SocketIOClient* socket;
     
 }
@@ -42,7 +42,7 @@
     
     // Prepare Class
     link = [AFNetworkingSingleton sharedAFNetworkingSingleton];
-    
+    streamer = [DOUAudioStreamer new];
     // Prepare Delegate
     _musicTable.delegate = self;
     _musicTable.dataSource = self;
@@ -59,6 +59,19 @@
     
 
 }
+
+#pragma mark - Streamer Music
+-(void)getStreamFromServer {
+    
+    Track *track = [Track new];
+    NSURL *musicURL = [NSURL URLWithString:@"http://localhost:3162/music/1234.mp3"];
+    track.audioFileURL = musicURL;
+    
+    streamer = [DOUAudioStreamer streamerWithAudioFile:track];
+    [streamer play];
+    
+}
+
 #pragma mark - Socket.io
 -(void)doSocketIO {
     
@@ -68,6 +81,10 @@
     [socket on:@"chat message" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
         
         NSLog(@"Data: %@\nAck: %@",data,ack);
+        
+        if ([data[0] isEqualToString:@"play"]) {
+            [self getStreamFromServer];
+        }
     }];
     
     [socket connect];
