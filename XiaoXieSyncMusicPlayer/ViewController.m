@@ -28,6 +28,7 @@
     MusicCycleType musicCycleType;
     DOUAudioStreamer *streamer;
     SocketIOClient* socket;
+    NSArray *musicList;
     
 }
 @property (weak, nonatomic) IBOutlet UITableView *musicTable;
@@ -43,6 +44,8 @@
     // Prepare Class
     link = [AFNetworkingSingleton sharedAFNetworkingSingleton];
     streamer = [DOUAudioStreamer new];
+    musicList = [NSArray new];
+    
     // Prepare Delegate
     _musicTable.delegate = self;
     _musicTable.dataSource = self;
@@ -56,35 +59,58 @@
     
     // Socket.io
     [self doSocketIO];
-    
+}
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
 }
 
 #pragma mark - Streamer Music
--(void)getStreamFromServer {
+-(void)getStreamFromServerAtIndex:(NSInteger)index {
     
     Track *track = [Track new];
-    NSURL *musicURL = [NSURL URLWithString:@"http://localhost:3162/music/1234.mp3"];
+    
+    
+    NSString *uRLString = [NSString stringWithFormat:@"http://192.168.1.86:3162/music/%@",musicList[index]];
+    
+    NSLog(@"\n-----------\n%@\n------------",uRLString);
+//    NSURL *musicURL = [NSURL URLWithString:[uRLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURL *musicURL = [NSURL URLWithString:[uRLString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     track.audioFileURL = musicURL;
     
     streamer = [DOUAudioStreamer streamerWithAudioFile:track];
-    [streamer play];
-    
 }
 
 #pragma mark - Socket.io
 -(void)doSocketIO {
     
-    NSURL* url = [[NSURL alloc] initWithString:@"http://localhost:3162"];
+    NSURL* url = [[NSURL alloc] initWithString:@"http://192.168.1.86:3162"];
     socket = [[SocketIOClient alloc] initWithSocketURL:url options:nil];
+    
+    
     
     [socket on:@"chat message" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
         
         NSLog(@"Data: %@\nAck: %@",data,ack);
         
         if ([data[0] isEqualToString:@"play"]) {
-            [self getStreamFromServer];
+            [streamer play];
         }
+        else if ([data[0] isEqualToString:@"pause"]) {
+            [streamer pause];
+        }
+        else if ([data[0] isEqualToString:@"client connected!!"]) {
+            [self nextMusicBtnPressed:nil];
+        }
+    }];
+    
+    [socket on:@"musicList" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
+        
+        NSLog(@"Data: %@\nAck: %@",data,ack);
+        
+        musicList = data[0];
+        [_musicTable reloadData];
     }];
     
     [socket connect];
@@ -95,22 +121,22 @@
     
     if (playbackFlag) {
         [(UIButton*)sender setImage:[UIImage imageNamed:PAUSE_BTN_IMAGE] forState:UIControlStateNormal];
-        
+        [socket emit:@"chat message" withItems:@[@"play"]];
         
         playbackFlag = false;
     }
     else {
         [(UIButton*)sender setImage:[UIImage imageNamed:PLAYBACK_BTN_IMAGE] forState:UIControlStateNormal];
-        
+        [socket emit:@"chat message" withItems:@[@"pause"]];
         
         playbackFlag = true;
     }
 }
 - (IBAction)lastMusicBtnPressed:(id)sender {
-    [socket emit:@"chat message" withItems:@[@"play",@"台灣有個阿里山."]];
+    [socket emit:@"chat message" withItems:@[@"I GOT YOU！！"]];
 }
 - (IBAction)nextMusicBtnPressed:(id)sender {
-    
+    [socket emit:@"musicList" withItems:@[@"I GOT YOU！！"]];
 }
 - (IBAction)playbackModeBtnPresssed:(id)sender {
     
@@ -180,6 +206,10 @@ static NSIndexPath *lastPlaybackIndexPath = nil;
     
     [self setMusicIndicatorStateAtIndexPath:indexPath];
     
+    [self getStreamFromServerAtIndex:indexPath.row];
+    
+    [socket emit:@"chat message" withItems:@[@"play"]];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:true];
 }
 
@@ -192,14 +222,14 @@ static NSIndexPath *lastPlaybackIndexPath = nil;
     // 分割線的長度調整
     tableView.separatorInset = UIEdgeInsetsMake(0, 40, 0, 0);
     
-    return 3;
+    return musicList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MusicListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    cell.number.text = @"1";
-    cell.song.text = @"百萬大歌星";
+    cell.number.text = [NSString stringWithFormat:@"%ld",indexPath.row + 1];
+    cell.song.text = [musicList objectAtIndex:indexPath.row];
     cell.singer.text = @"庾澄慶";
     
     return cell;
