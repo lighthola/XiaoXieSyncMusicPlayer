@@ -55,7 +55,7 @@
     musicCycleType = MusicCycleTypeLoopAll;
     
     // Some methods
-//    [self linkToServer];
+    [self linkToServer];
     
     // Socket.io
     [self doSocketIO];
