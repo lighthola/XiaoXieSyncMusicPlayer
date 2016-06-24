@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sync Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/dropzone.css">
+
+    <style type="text/css">
+
+
+.conversation-wrap{
+    padding:0;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.conversation{
+    padding:5px;
+    border-bottom:1px solid #ddd;
+    margin:0;
+
+}
+
+.message-wrap{
+    padding:0;
+}
+
+.msg{
+    padding:5px;
+    margin:0;
+}
+
+.msg-wrap{
+    padding:10px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.time{
+    color:#bfbfbf;
+}
+
+.send-wrap{
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding:10px;
+}
+
+.send-message{
+    resize: none;
+}
+
+.highlight{
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
+
+.send-message-btn{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    border-bottom-right-radius: 0;
+}
+
+.msg-wrap .media-heading{
+    color:#003bb3;
+    font-weight: 700;
+}
+
+.msg-date{
+    background: none;
+    text-align: center;
+    color:#aaa;
+    border:none;
+    border-bottom: 1px solid #ddd;
+}
+
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+
+</head>
+<body>
+
+
+
+<div class="container bootstrap snippet">
+  <!--
+    <div class="row">
+        <a href="#" class="btn btn-info  send-message-btn" role="button"><i class="fa fa-search"></i> Search</a>
+        <a href="#" class="btn btn-info  send-message-btn" role="button"><i class="fa fa-gears"></i> Settings</a>
+    </div>
+  -->
+    <div class="row">
+        <div class="conversation-wrap col-md-2">
+          <button id="uploadButton" class="btn">Upload Your Musics</button>
+          <div>
+            <form id="upload-widget" method="post" action="/upload" class="dropzone" style="display:none;">
+              <div class="fallback">
+                <input name="file" type="file" />
+              </div>
+            </form>
+          </div>
+
+          <!--
+            <div class="media conversation">
+                <a class="pull-left" href="#">
+                    <img class="media-object img-circle"  style="width: 50px; height: 50px;" src="http://bootdey.com/img/Content/user_2.jpg">
+                </a>
+                <div class="media-body">
+                    <h5 class="media-heading">Michael clarkt</h5>
+                    <small class="text-muted">Lorem ipsum dolor...</small>
+                </div>
+            </div>
+          -->
+
+
+            <div class="media conversation" id="musicList" style="display:block;">
+
+          </div>
+        </div> <!--songlist finish point-->
+
+
+
+        <div class="message-wrap col-md-7" style="margin:15px;"> <!-- message list start -->
+
+          <div class="row" style="height:15vh;">
+
+
+
+
+
+          <audio style="margin:0 0 0 30%;" id="myAudio" controls>
+            <source src="" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+
+            <div class="msg-wrap">
+              <div class="alert alert-info msg-date">
+                  <strong id="currentText"></strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="chatDiv" style="max-height:70vh; height:70vh;  overflow:auto;">
+
+
+
+          </div>
+<!--
+                <div class="media msg ">
+                    <a class="pull-left" href="#">
+                        <img class="media-object    img-circle" style="width: 32px; height: 32px;" src="http://bootdey.com/img/Content/user_2.jpg">
+                    </a>
+                    <div class="media-body">
+                        <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
+                        <h5 class="media-heading">Pauline mothg</h5>
+                        <small class="col-md-10 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis, augue sed euismod varius, nisl metus vestibulum neque, nec dictum est dui et tellus</small>
+                    </div>
+                </div>
+
+                <div class="alert alert-info msg-date">
+                    <strong>Today</strong>
+                </div>
+
+
+
+                <div class="media msg">
+                    <a class="pull-left" href="#">
+                        <img class="media-object img-circle" style="width: 32px; height: 32px;" src="http://bootdey.com/img/Content/user_2.jpg">
+                    </a>
+                    <div class="media-body">
+                        <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
+                        <h5 class="media-heading">Pauline mothg</h5>
+                        <small class="col-md-10 text-muted">Cras commodo ante sit amet nulla porta, sed feugiat lectus accumsan. Maecenas luctus est sed dignissim mattis. Mauris ullamcorper hendrerit est in pharetra text-muted"</small>
+                    </div>
+                </div>
+-->
+
+<!--qq-->
+
+<div class="row" style="height:10vh;">
+
+<div> <!-- message input start -->
+            <div class="send-wrap ">
+              <form action="">
+                <input id="m" autocomplete="off" class="form-control send-message" rows="3" placeholder="Write a reply..."></textarea>
+                <button class="btn btn-success" role="button">
+                    <i class="fa fa-share"></i> Send Message
+                </button>
+              </form>
+
+            </div>
+
+</div> <!-- message input finish -->
+</div>
+      </div> <!-- message list finish -->
+
+<div class="conversation-wrap col-md-2" id="usersList"> <!-- member list -->
+
+  <!-- Users html sample
+  <div class="media conversation" >
+      <a class="pull-left" href="#">
+          <img class="media-object img-circle"  style="width: 30px; height: 30px;" src="img/user1.png">
+      </a>
+      <div class="media-body">
+          <h5 class="media-heading"></h5>User1</div>
+  </div>
+
+
+
+  <div class="media conversation">
+      <a class="pull-left" href="#">
+          <img class="media-object img-circle"  style="width: 30px; height: 30px;" src="img/user1.png">
+      </a>
+      <div class="media-body">
+          <h5 class="media-heading"></h5>User1</div>
+  </div>
+  <div class="media conversation">
+      <a class="pull-left" href="#">
+          <img class="media-object img-circle"  style="width: 30px; height: 30px;" src="img/user1.png">
+      </a>
+      <div class="media-body">
+          <h5 class="media-heading"></h5>User1</div>
+  </div>
+-->
+</div> <!-- member list finishi point -->
+
+    </div><!--row finish point -->
+
+
+</div>
+<script type="text/javascript">
+
+var currentSong2 = "nosong";
+var player = document.getElementById("myAudio");
+var socket = io();
+
+
+// chat
+
+$('form').submit(function(){
+  socket.emit('chat message',$('#m').val());
+  $('#m').val('');
+  return false;
+});
+
+socket.on('chat message' ,function(data){
+  console.log('image'+data.image);
+  var messageDiv='<div class="media msg "> <a class="pull-left" href="#"> <img class="media-object img-circle" style="width: 32px; height: 32px;" src="'+data.image+'"> </a> <div class="media-body"> <small class="pull-right time"><i class="fa fa-clock-o"></i> '+formatAMPM(new Date())+'</small> <h5 class="media-heading">'+data.name+'</h5> <small class="col-md-10 text-muted">'+data.msg+'</small> </div></div>';
+  $('#chatDiv').append(messageDiv);
+$("#chatDiv").scrollTop($("#chatDiv")[0].scrollHeight); //把聊天顯示的捲軸拉到最下面
+});
+
+// <div class="media msg ">
+//     <a class="pull-left" href="#">
+//         <img class="media-object    img-circle" style="width: 32px; height: 32px;" src="http://bootdey.com/img/Content/user_2.jpg">
+//     </a>
+//     <div class="media-body">
+//         <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
+//         <h5 class="media-heading">Pauline mothg</h5>
+//         <small class="col-md-10 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis, augue sed euismod varius, nisl metus vestibulum neque, nec dictum est dui et tellus</small>
+//     </div>
+// </div>
+
+
+
+// music List
+socket.on('musicList', function(musicList){
+  console.log('got list but now append',musicList);
+  $(".musicListClass").remove();
+
+    for(var i= 0 ; i< musicList.length ;i++){
+      var songTitle = musicList[i].substring(0,musicList[i].indexOf('.mp3'));
+      var src = 'http://localhost:8080/music/'+musicList[i];
+      var mediaConversation ='<div onClick="player.src=\''+src+'\'; socket.emit(\'currentSong\',\''+musicList[i]+'\');" class="media conversation musicListClass"> <a class="pull-left" href="#"> <img class="media-object img-circle"  style="width: 50px; height: 50px;" src="img/play.png">  </a> <div class="media-body"> <h5 class="media-heading">'+songTitle+'</h5> <div> </div>';
+      // console.log(mediaConversation);
+      $("#musicList").append(mediaConversation);
+    }
+
+
+
+});
+socket.on('currentSong', function(currentSong){
+  currentSong2 = currentSong;
+  // console.log(currentSong2); //在瀏覽器CONSOLE顯示目前播放什麼音樂
+  if(currentSong2!=="nosong"){
+  player.src = 'http://localhost:8080/music/'+currentSong2;
+  player.play();
+  }
+
+  //清除並顯示目前歌曲名稱
+  $('#currentText').html('');
+  $('#currentText').append(currentSong2.substring(0,currentSong2.indexOf('.mp3')));
+
+});
+
+// Users List
+
+// socket.on('add user',function(username){
+//   socket.emit('add user',username);
+//   socket.name = username;
+// });
+
+socket.on('users',function(onlineUsers){
+  $(".userListClass").remove();
+  console.log('users list:  '+onlineUsers);
+  // console.log(users.length);
+  for(var u in onlineUsers){
+    var userHtml = '<div class="userListClass media conversation"> <a class="pull-left" href="#"> <img class="media-object img-circle" style="width: 30px; height: 30px;" src="'+onlineUsers[u].google.image+'"> </a> <div class="media-body"> <h5 class="media-heading"></h5>'+onlineUsers[u].google.name+'</div> </div>';
+    $("#usersList").append(userHtml);
+  }
+
+
+});
+
+
+//date function
+function formatAMPM(date) {
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+  return strTime;
+}
+
+
+
+
+</script>
+
+<script type="text/javascript" src="/js/dropzone.js"></script>
+<script type="text/javascript">
+  $("#uploadButton").click(function(){
+    $("#upload-widget").toggle();
+  });
+  Dropzone.options.uploadWidget = {
+    paramName: 'file',
+    maxFilesize: 10, // MB
+    maxFiles: 30,
+    dictDefaultMessage: 'Drag an mp3 here to upload, or click to select one',
+    headers: {
+    },
+    acceptedFiles: 'audio/*',
+    init: function() {
+      this.on('success', function( file, resp ){
+        console.log( file );
+        console.log( resp );
+      });
+
+    }
+  };
+</script>
+
+</body>
+</html>
